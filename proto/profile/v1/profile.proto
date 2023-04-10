@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package profile.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/asadzeynal/profile-task/pb";
+
+message GetProfileRequest {
+  string inn = 1;
+}
+
+message GetProfileResponse {
+  string inn = 1;
+  string kpp = 2;
+  string owner_full_name = 3;
+  string company_name = 4;
+}
+
+service ProfileService {
+  rpc GetProfile(GetProfileRequest) returns (GetProfileResponse) {
+    option (google.api.http) = {get: "/api/getprofile"};
+  }
+}
