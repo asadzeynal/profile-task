@@ -1,4 +1,4 @@
-package main
+package profile
 
 type CompanyData struct {
 	Inn           string

@@ -1,11 +1,11 @@
-package main
+package profile
 
 import (
 	"context"
 	"fmt"
 	"log"
 
-	"github.com/asadzeynal/profile-task/pb"
+	pb "github.com/asadzeynal/profile-task/gen/profile/v1"
 )
 
 type Server struct {
