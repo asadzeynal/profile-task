@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
+	github.com/flowchartsman/swaggerui v0.0.0-20221017034628-909ed4f3701b
 	github.com/golang/glog v1.0.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.2
 	google.golang.org/genproto v0.0.0-20230223222841-637eb2293923

@@ -9,3 +9,5 @@ plugins:
   - plugin: grpc-gateway
     out: gen
     opt: paths=source_relative
+  - plugin: swagger
+    out: swaggerui
