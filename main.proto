@@ -10,6 +10,7 @@ message GetProfileResponse {
   string inn = 1;
   string kpp = 2;
   string ownerFullName = 3;
+  string companyName = 4;
 }
 
 service ProfileService {
