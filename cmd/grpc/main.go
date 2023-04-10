@@ -4,14 +4,15 @@ import (
 	"log"
 	"net"
 
-	"github.com/asadzeynal/profile-task/pb"
+	pb "github.com/asadzeynal/profile-task/gen/profile/v1"
+	"github.com/asadzeynal/profile-task/profile"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
 
 func main() {
-	client := NewClient()
-	server := NewServer(client)
+	client := profile.NewClient()
+	server := profile.NewServer(client)
 
 	grpcServer := grpc.NewServer()
 	reflection.Register(grpcServer)
