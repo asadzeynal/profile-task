@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/asadzeynal/profile-task/pb";
+
+message GetProfileRequest { string inn = 1; }
+
+message GetProfileResponse {
+  string inn = 1;
+  string kpp = 2;
+  string ownerFullName = 3;
+}
+
+service ProfileService {
+    rpc GetProfile(GetProfileRequest) returns (GetProfileResponse) {}
+}
