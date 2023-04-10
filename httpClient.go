@@ -40,7 +40,6 @@ func (c *Client) FetchDataByInn(inn string) (CompanyData, error) {
 	}
 
 	data := parseResponse(res)
-	fmt.Println(data)
 	return data, nil
 }
 
