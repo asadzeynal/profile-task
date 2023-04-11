@@ -14,6 +14,7 @@ func main() {
 	client := profile.NewClient()
 	server := profile.NewServer(client)
 
+	// TODO: Implement graceful shutdown
 	grpcServer := grpc.NewServer()
 	reflection.Register(grpcServer)
 	pb.RegisterProfileServiceServer(grpcServer, server)
@@ -24,7 +25,6 @@ func main() {
 	}
 
 	log.Printf("Starting grpc server at %s", listener.Addr().String())
-
 	err = grpcServer.Serve(listener)
 	if err != nil {
 		log.Fatal(err)
