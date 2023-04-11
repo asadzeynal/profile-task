@@ -14,7 +14,7 @@ func main() {
 		log.Fatalf("Could not read file: %v", err)
 	}
 
-	http.Handle("/swagger/", http.StripPrefix("/swagger", swaggerui.Handler(spec)))
+	http.Handle("/swaggerui/", http.StripPrefix("/swaggerui", swaggerui.Handler(spec)))
 	log.Println("serving on :8082")
 	log.Fatal(http.ListenAndServe(":8082", nil))
 }
